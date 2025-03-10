@@ -9,6 +9,7 @@ function agregarAmigo(){
     if (nombreDeAmigo) { 
         listaNombreAmigos.push(nombreDeAmigo);
         console.log(listaNombreAmigos);
+        document.getElementById("amigo").value = "";
         return nombreDeAmigo;
         
     } else {
@@ -16,4 +17,14 @@ function agregarAmigo(){
         return alert("¡Por favor ingrese un nombre válido!");
     }
    
+}
+
+function sortearAmigo(){
+    
+    if(listaNombreAmigos.length === 0){
+        return alert("¡no existen nombres para sortear!");
+    } else{
+        let numeroGenerado =  Math.floor(Math.random()*listaNombreAmigos.length);
+        return alert(listaNombreAmigos[numeroGenerado]);
+    }
 }
