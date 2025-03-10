@@ -13,7 +13,7 @@ function agregarAmigo(){
         
     } else {
         console.log(listaNombreAmigos);
-        return null;
+        return alert("¡Por favor ingrese un nombre válido!");
     }
    
 }
